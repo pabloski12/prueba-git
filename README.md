@@ -1,4 +1,4 @@
-# SNR | SISTEMA NACIONAL RECLAMOS
+# SNR | SISTEMA NACIONAL DE RECLAMOS
 
 Este es un proyecto escolar que consiste en el desarrollo de un sistema para la gestión de reclamos o denuncias que funcione a nivel nacional(SNR). El sistema permite a los usuarios ingresar denuncias o reclamos, los cuales serán gestionados por la administración correspondiente.
 
