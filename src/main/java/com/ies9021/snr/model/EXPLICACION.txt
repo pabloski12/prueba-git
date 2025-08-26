@@ -1,0 +1,9 @@
+Paquete 'model'
+
+Contiene las clases que representan las entidades de la base de datos.
+Ejemplo: User.java, Error.java
+
+Propósito:
+- Definir atributos y métodos básicos (getters/setters).
+- Servir de estructura de datos para toda la app.
+- No debería contener lógica de negocio.

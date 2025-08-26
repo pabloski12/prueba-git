@@ -1,0 +1,8 @@
+Paquete 'config'
+
+Contiene clases de configuración general de la aplicación, como la conexión a la base de datos.
+Ejemplo: DbConnection.java, que devuelve un objeto Connection de JDBC.
+
+Propósito:
+- Centralizar la configuración de la DB.
+- Evitar repetir código de conexión en múltiples lugares.

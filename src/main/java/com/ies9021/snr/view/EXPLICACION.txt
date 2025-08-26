@@ -1,0 +1,9 @@
+Paquete 'view'
+
+Contiene las pantallas de la aplicación construidas con Swing (JFrame, JPanel).
+Ejemplo: UserForm.java, ErrorForm.java
+
+Propósito:
+- Interfaz gráfica con la que interactúa el usuario.
+- No debería contener lógica de negocio ni consultas SQL.
+- Los eventos (botones, combos) se deberian manejar en el controlador.
