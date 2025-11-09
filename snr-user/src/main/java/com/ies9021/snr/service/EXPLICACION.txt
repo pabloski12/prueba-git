@@ -1,0 +1,9 @@
+Paquete 'service'
+
+Contiene la lógica de negocio de la aplicación.
+Ejemplo: UserService.java, ErrorService.java
+
+Propósito:
+- Aplicar validaciones y reglas antes de persistir datos.
+- Servir de intermediario entre la vista/controlador y el DAO.
+- Evitar que la lógica de negocio esté mezclada con SQL o GUI.

@@ -1,0 +1,9 @@
+Paquete 'dto'
+
+Contiene clases para transferir datos entre capas o entre la app y la bd o API's externas.
+DTO = Data Transfer Object
+
+Propósito:
+- Evitar exponer directamente entidades completas.
+- Agrupar solo los datos necesarios para una operación.
+- Facilitar la comunicación entre capas sin acoplarlas.

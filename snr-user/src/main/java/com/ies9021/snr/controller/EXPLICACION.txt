@@ -1,0 +1,9 @@
+Paquete 'controller'
+
+Contiene clases que conectan la vista con la lógica de negocio (servicios/DAOs).
+Ejemplo: UserController.java
+
+Propósito:
+- Recibir acciones de la vista (clicks, entradas).
+- Llamar a servicios o DAOs según corresponda.
+- Mantener la vista y la lógica de negocio separadas.

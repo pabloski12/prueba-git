@@ -1,0 +1,9 @@
+Paquete 'dao' Data Access Object (consultas SQL)
+
+Contiene las clases que manejan directamente las consultas SQL (CRUD).
+Ejemplo: UserDAO.java, ErrorDAO.java
+
+Propósito:
+- Acceder y manipular datos en la base de datos.
+- Mantener separada la lógica de la base de datos del resto de la aplicación.
+- Cada DAO es específico para una entidad.
