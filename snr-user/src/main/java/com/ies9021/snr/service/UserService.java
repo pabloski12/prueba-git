@@ -8,6 +8,12 @@ public class UserService {
 
     private UserDAO userDAO;
 
+    // Constructor para testing (JUNIT)
+    public UserService(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
+
+    // Constructor normal (app real)
     public UserService() {
         this.userDAO = new UserDAO();
     }
@@ -17,58 +23,24 @@ public class UserService {
     }
 
     public boolean createUser(User user) {
-        // Validaciones antes de guardar
-        if (user.getName() == null || user.getName().isEmpty()) {
-            System.out.println("El nombre es obligatorio");
-            return false;
-        }
+        if (user.getName() == null || user.getName().isEmpty()) return false;
+        if (user.getEmail() == null || user.getEmail().isEmpty()) return false;
+        if (user.getPassword() == null || user.getPassword().isEmpty()) return false;
+        if (user.getDni() == null || user.getDni().isEmpty()) return false;
 
-        if (user.getEmail() == null || user.getEmail().isEmpty()) {
-            System.out.println("El email es obligatorio");
-            return false;
-        }
-
-        if (user.getPassword() == null || user.getPassword().isEmpty()) {
-            System.out.println("La contraseña es obligatoria");
-            return false;
-        }
-
-        if (user.getDni() == null || user.getDni().isEmpty()) {
-            System.out.println("️ El DNI es obligatorio");
-            return false;
-        }
-
-        // Si todo está bien, llamo a DAO
-        boolean success = userDAO.insertUser(user);
-
-        if (success) {
-            System.out.println(" Usuario creado correctamente");
-        } else {
-            System.out.println(" Error al crear el usuario");
-        }
-
-        return success;
+        return userDAO.insertUser(user);
     }
 
-    // MÉTODOS NUEVOS QUE FALTABAN
     public boolean updateUser(User user) {
-        if (user.getIdUser() == 0) {
-            System.out.println("ID de usuario inválido");
-            return false;
-        }
-        if (user.getName() == null || user.getName().isEmpty()) {
-            System.out.println("El nombre es obligatorio");
-            return false;
-        }
-        
+        if (user.getIdUser() <= 0) return false;
+        if (user.getName() == null || user.getName().isEmpty()) return false;
+
         return userDAO.updateUser(user);
     }
 
     public boolean deleteUser(int idUser) {
-        if (idUser <= 0) {
-            System.out.println("ID de usuario inválido");
-            return false;
-        }
+        if (idUser <= 0) return false;
+
         return userDAO.deleteUser(idUser);
     }
 

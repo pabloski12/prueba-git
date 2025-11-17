@@ -6,16 +6,19 @@ import java.sql.SQLException;
 
 public class DbConnection {
 
-    private static final String URL =
-        "jdbc:mysql://ies9021.edu.ar:3306/ies9021_SNR"
-      + "?useSSL=false&allowPublicKeyRetrieval=true"
-      + "&useUnicode=true&characterEncoding=utf8"
-      + "&serverTimezone=UTC";
-        
-    private static final String USER = "ies9021_userdb";
-    private static final String PASS = "Xsw23edc.2025";
+    private static final String URL = "jdbc:h2:mem:snr_test;DB_CLOSE_DELAY=-1;MODE=MySQL";
+    private static final String USER = "sa";
+    private static final String PASSWORD = "";
+
+    static {
+        try {
+            Class.forName("org.h2.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASS);
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }

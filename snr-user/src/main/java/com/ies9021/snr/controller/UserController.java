@@ -7,7 +7,6 @@ import com.ies9021.snr.service.GenderService;
 import java.util.List;
 
 public class UserController {
-    
 
     private UserService userService;
     private GenderService genderService;
@@ -42,7 +41,7 @@ public class UserController {
         return userService.getUserById(idUser);
     }
 
-    // TUS MÉTODOS ORIGINALES (se mantienen)
+    // TUS MÉTODOS ORIGINALES
     public void showAllUsers() {
         List<User> users = userService.getAllUsers();
 
@@ -51,17 +50,17 @@ public class UserController {
         } else {
             System.out.println("📋 Lista de usuarios:");
             for (User u : users) {
-                System.out.println("ID: " + u.getIdUser() + 
-                                   " | Nombre: " + u.getName() + 
-                                   " | Email: " + u.getEmail() + 
+                System.out.println("ID: " + u.getIdUser() +
+                                   " | Nombre: " + u.getName() +
+                                   " | Email: " + u.getEmail() +
                                    " | DNI: " + u.getDni());
             }
         }
     }
 
     public void createUser(String name, String lastName, String dni, String email, 
-                          String password, int idGender, String locationUser, 
-                          int idTypeUser, int idUserCreate) {
+                           String password, int idGender, String locationUser, 
+                           int idTypeUser, int idUserCreate) {
         User newUser = new User();
 
         newUser.setName(name);
